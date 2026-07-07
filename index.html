@@ -1,47 +1,28 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Elroie Games</title>
-	<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Snake Full Game</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-	<header>
-		<h1>🎮 Elroie Games</h1>
+<div id="lobby">
+	<h1>🐍 Snake Game</h1>
 
-		<input id="search" type="text" placeholder="🔍 חפש משחק...">
-	</header>
+	<div id="skins"></div>
 
-	<nav>
-		<button onclick="filterGames('all')">הכל</button>
-		<button onclick="filterGames('arcade')">ארקייד</button>
-		<button onclick="filterGames('puzzle')">חשיבה</button>
-		<button onclick="filterGames('action')">פעולה</button>
-	</nav>
+	<button id="startBtn" disabled>START</button>
+</div>
 
-	<main id="gamesContainer">
+<canvas id="game"></canvas>
 
-		<div class="game-card arcade" onclick="window.open('flappy.html', '_blank')">
-			<img src="https://via.placeholder.com/300x180" alt="Flappy Bird">
-			<p>Flappy Bird</p>
-		</div>
+<div id="joystick">
+	<div id="stick"></div>
+</div>
 
-		<div class="game-card puzzle" onclick="window.open('///C:/Users/elroi/Desktop/%D7%9E%D7%A9%D7%97%D7%A7%D7%99%D7%9D/%D7%90%D7%99%D7%A7%D7%A1-%D7%A2%D7%99%D7%92%D7%95%D7%9C/index.html', '_blank')">
-	        <img src="tick_tack_toe.png" alt="Tic Tac Toe">
-	        <p>איקס עיגול</p>
-        </div>
+<button id="boost">BOOST</button>
 
-		<div class="game-card action" onclick="window.open('///C:/Users/elroi/Desktop/%D7%9E%D7%A9%D7%97%D7%A7%D7%99%D7%9D/%D7%A1%D7%A0%D7%99%D7%99%D7%A7/index.html', '_blank')">
-			<img src="snake.png" alt="Snake">
-			<p>Snake</p>
-		</div>
-
-	</main>
-
-	<script src="script.js"></script>
-
+<script src="game.js"></script>
 </body>
 </html>
